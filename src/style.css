@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vh;
+    height: 100vh;
+    background-image: linear-gradient(to left, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.container {
+    background: rgb(124, 124, 124);
+    background: linear-gradient(360deg, rgba(201, 199, 199, 0.65) 0%, rgba(255, 250, 250, 1) 100%);
+    width: 440px;
+    height: 800px;
+    position: absolute;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+}
+
+.title1 {
+    user-select: none;
+    margin-top: 20px;
+    height: 100px;
+    line-height: 100px;
+    font-family: fantasy;
+    font-size: xxx-large;
+    color: #78a6f6;
+}
+
+.title2 {
+    user-select: none;
+    margin: 0 0 10px 0;
+    height: 30px;
+    line-height: 30px;
+    /*font-family: "Segoe UI", serif;*/
+    font-family: "MV Boli", serif;
+    font-weight: bold;
+    font-size: large;
+    color: #494a4b;
+}
+
+.formAdd {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    font-family: "Segoe UI", serif;
+
+}
+
+
+#newTodo {
+    vertical-align: middle;
+    outline: none;
+    border: none;
+    padding: 5px 0 3px 0;
+    font-size: large;
+    background-color: transparent;
+    font-family: "MV Boli", '楷体', serif;
+    font-style: italic;
+    border-bottom: 3px dashed #92b4f5;
+    transition: border-bottom 0.8s;
+}
+#newTodo:hover{
+    border-bottom: 3px dashed #a987f5;
+
+}
+#newTodo:focus {
+    border-bottom: 3px dashed #a987f5;
+}
+
+.addBtn {
+    padding: 2px 3px;
+    /*font-family: "Microsoft YaHei UI Light", serif;*/
+    font-weight: bold;
+    font-family: "MV Boli", serif;
+    height: 40px;
+    border: 0;
+    font-size: large;
+    border-radius: 6px;
+    color: #3b8fea;
+    background-color: #d2dae7;
+    transition: box-shadow 0.5s;
+}
+
+.addBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px #a6c1ee;
+}
+
+main {
+    height: 66%;
+    width: 100%;
+    /*width: 360px;*/
+    margin: auto;
+    position: relative;
+    top: 0;
+    overflow-y: scroll;
+}
+
+.list li {
+    border-bottom: 1px solid #dcdcdc;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Microsoft YaHei UI Light", serif;
+    font-size: 16px;
+    transition: background-color 0.5s ;
+}
+.list li:hover{
+    background-color: #c5cdef;
+}
+
+
+
+.checkBtn {
+    margin-top: -2px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: transparent;
+    position: relative;
+}
+
+.checkBtn::before {
+    content: "";
+    border-radius: 8px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: #fff;
+    padding: 0 2px 2px 0;
+    width: 200%;
+    height: 200%;
+    font-size: 16px;
+    transition: all 0.5s;
+    border: none
+}
+
+.checkBtn:hover::before {
+    box-shadow: 0 0 3px #949393;
+}
+
+.checkBtn:checked::before {
+    content: "\2713";
+    width: 200%;
+    height: 200%;
+    font-style: italic;
+    text-align: center;
+    vertical-align: center;
+    padding: 0 2px 2px 0;
+    position: absolute;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #cec1ec;
+}
+
+.checkBtn:checked + .content {
+    text-decoration: line-through;
+    transform: rotateX(360deg);
+    transition:  linear 0.5s;
+}
+
+.content {
+    width: 340px;
+    padding-left: 10px;
+    text-align: left;
+    border: none;
+    outline: none;
+    /*margin-top: 6px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.closeBtn {
+    /*margin-top: 6px;*/
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: x-large;
+    font-weight: bolder;
+    transition: color .5s;
+    color: #8f8e8e;
+    font-family: "Microsoft YaHei UI Light", serif;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+    color: #070707;
+}
+
+
+
+.footer{
+   box-shadow:0 -1px 1px  #dcdcdc ;
+    min-height: 6%;
+    /*border: 1px solid #000;*/
+    display: flex;
+    justify-content: space-around;
+    font-family: "MV Boli", serif;
+    font-weight: bolder;
+    align-items: center;
+}
+.clearBox button{
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: "MV Boli", serif;
+    font-size: 16px;
+    transition:background-color 0.5s ;
+}
+.clearBox button:hover{
+    background-color: #9eadef;
+}
+
+#time:hover #time1 {
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+#time:hover #time2 {
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+#time1 {
+    z-index: 1;
+    font-family: "MV Boli", serif;
+    position: absolute;
+    left: 200px;
+    top: -70px;
+    font-size: larger;
+    cursor: default;
+    visibility: visible;
+    padding: 5px 10px;
+    color: rgb(34, 63, 107);
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+    user-select: none;
+}
+#time2 {
+    z-index: 2;
+    padding: 5px 10px;
+    color: rgb(34, 63, 107);
+    font-family: "MV Boli", serif;
+    position: absolute;
+    left: 120px;
+    top: -70px;
+    font-size: larger;
+    cursor: default;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    user-select: none;
+}
