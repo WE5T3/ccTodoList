@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Title</title>
+  <link rel="stylesheet" href="index.b84c4f6f.css">
+  <link rel="stylesheet" href="index.189edcef.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div id="time">
+      <div id="time1"></div>
+      <div id="time2"></div>
+    </div>
+    <header class="header">
+      <h1 class="title1">To-Do List</h1>
+      <h1 class="title2">Today I need todo...</h1>
+     
+      <div class="formAdd">
+        <input type="text" id="newTodo" name="newTodo" placeholder="Add new todo">
+        <button class="addBtn" onclick="addTodo()">Submit!</button>
+      </div>
+    </header>
+    <main>
+      <div class="mask">
+        <svg t="1661135328938" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6097" width="60" height="60"><path d="M831.7 369.4H193.6L64 602v290.3h897.2V602L831.7 369.4zM626.6 604.6c0 62.9-51 113.9-114 113.9s-114-51-114-113.9H117.5l103.8-198h582.5l103.8 198h-281zM502.2 131h39.1v140.6h-39.1zM236.855 200.802l27.647-27.647 99.419 99.418-27.648 27.648zM667.547 272.637l99.418-99.419 27.648 27.648-99.418 99.418z" p-id="6098" fill="#2c2c2c"></path></svg>
+        <p class="maskP">当前暂无待办事项</p>
+        <p class="maskP">输入待办事项按回车或点击Submit进行添加</p>
+        <p class="maskP">双击条目即可对内容进行编辑</p>
+      </div>
+      <div class="list">
+        <ul class="todoList">
+        </ul>
+        <ul class="doneList">
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="leftCount">2 items left</div>
+      <div class="clearBox">
+        <button class="clearDone" onclick="clearDone()">clear completed</button>
+        <button class="clearAll" onclick="clearAll()">clear all</button>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="index.96dae1be.js"></script>
+</html>
