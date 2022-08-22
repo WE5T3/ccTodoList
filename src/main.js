@@ -131,7 +131,7 @@ function check(checkId, checked) {
     update(todoList)
 }
 
-// 当删除按钮被点击时,删除todoList中的对应条目,并更新页面
+// 当删除按钮被点击时,删除todoList中的对应条目,并更新页面.
 function remove(closeId) {       //此处一开始定义函数名为close(),但是onclick无法触发, 原因为函数命名与系统库名close冲突
     seekIndex(closeId.substring(5))
     todoList.splice(workIndex, 1)
